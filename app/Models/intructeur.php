@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+namespace App\Models;
 
-<body>
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-</body>
+class intructeur extends Model
+{
+    use HasFactory;
 
-</html>
+    protected $fillable = [
+        'Id',
+        'Voornaam',
+        'Tussenvoegsel',
+        'Achternaam',
+        'Mobiel',
+        'DatumInDienst',
+        'AantalSterren',
+        'IsActief',
+        'OpMerkingen',
+        'DatumAanGemaakt',
+        'DatumGewijzigd'
+    ];
+}
