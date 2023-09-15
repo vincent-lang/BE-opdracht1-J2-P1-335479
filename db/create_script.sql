@@ -32,8 +32,8 @@ use MVCS1J2Opdracht1;
 -- =============================================================================
 --  01            29-08-2023      Vincent van de Merwe            new          
 -- =============================================================================
-drop table if exists Instructeur;
-create table if not exists Instructeur (
+drop table if exists Instructeurs;
+create table if not exists Instructeurs (
 Id TINYINT UNSIGNED not null auto_increment,
 Voornaam varchar(50) not null,
 Tussenvoegsel varchar(50) not null,
@@ -109,7 +109,7 @@ DatumAanGemaakt datetime(6) not null,
 DatumGewijzigd datetime(6) not null,
 CONSTRAINT      PK_VoertuigInstructeur_Id   PRIMARY KEY CLUSTERED(Id),
 foreign key (VoertuigId) references Voertuig(Id),
-foreign key (InstructeurId) references Instructeur(Id)
+foreign key (InstructeurId) references Instructeurs(Id)
 ) engine=InnoDB;
 
 -- Step: 08
@@ -119,15 +119,15 @@ foreign key (InstructeurId) references Instructeur(Id)
 -- =============================================================================
 --  01            29-08-2023      Vincent van de Merwe            new          
 -- =============================================================================
-INSERT INTO Instructeur (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Instructeurs (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'Li', '', 'Zhan', '06-28493827', '2015-04-17', '***', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Instructeur (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Instructeurs (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'Leroy', '', 'Boerhaven', '06-39398734', '25-06-2018', '*', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Instructeur (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Instructeurs (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'Yoeri', 'Van', 'Veen', '06-24383291', '12-05-2010', '***', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Instructeur (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Instructeurs (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'Bert', 'Van', 'Sali', '06-48293823', '10-01-2023', '****', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Instructeur (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Instructeurs (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'Mohammed', 'El', 'Yassidi', '06-34291234', '14-06-2010', '*****', 1, NULL, SYSDATE(6), SYSDATE(6));
 
 -- Step: 09
