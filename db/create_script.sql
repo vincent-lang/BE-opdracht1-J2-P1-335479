@@ -74,8 +74,8 @@ CONSTRAINT      PK_TypeVoertuig_Id   PRIMARY KEY CLUSTERED(Id)
 -- =============================================================================
 --  01            29-08-2023      Vincent van de Merwe            new          
 -- =============================================================================
-drop table if exists Voertuig;
-create table if not exists Voertuig (
+drop table if exists Voertuigs;
+create table if not exists Voertuigs (
 Id TINYINT UNSIGNED not null auto_increment,
 Kenteken varchar(20) not null,
 Type varchar(30) not null,
@@ -108,7 +108,7 @@ OpMerkingen varchar(250) null default null,
 DatumAanGemaakt datetime(6) not null,
 DatumGewijzigd datetime(6) not null,
 CONSTRAINT      PK_VoertuigInstructeur_Id   PRIMARY KEY CLUSTERED(Id),
-foreign key (VoertuigId) references Voertuig(Id),
+foreign key (VoertuigId) references Voertuigs(Id),
 foreign key (InstructeurId) references Instructeurs(Id)
 ) engine=InnoDB;
 
@@ -153,29 +153,29 @@ VALUES (null, 'Bromfiets', 'AM', 1, NULL, SYSDATE(6), SYSDATE(6));
 -- =============================================================================
 --  01            29-08-2023      Vincent van de Merwe            new          
 -- =============================================================================
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'AU-67-IO', 'Golf', '12-06-2017', 'Diesel', 1, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'TR-24-OP', 'DAF', '23-05-2019', 'Diesel', 2, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'TH-78-KL', 'Mercedes', '01-01-2023', 'Benzine', 1, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, '90-KL-TR', 'Fiat 500', '12-09-2021', 'Benzine', 1, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, '34-TK-LP', 'Scania', '13-03-2015', 'Diesel', 2, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'YY-OP-78', 'BMW M5', '13-05-2022', 'Diesel', 1, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'UU-HH-JK', 'M.A.N', '03-12-2017', 'Diesel', 2, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'ST-FZ-28', 'Citroën', '20-01-2018', 'Elektrisch', 1, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, '123-FR-T', 'Piaggio ZIP', '01-02-2021', 'Benzine', 4, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'DRS-52-P', 'Vespa', '21-03-2022', 'Benzine', 4, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, 'STP-12-U', 'Kymco', '02-07-2022', 'Benzine', 4, 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
+INSERT INTO Voertuigs (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
 VALUES (null, '45-SD-23', 'Renault', '01-01-2023', 'Diesel', 3, 1, NULL, SYSDATE(6), SYSDATE(6));
 
 -- Step: 11

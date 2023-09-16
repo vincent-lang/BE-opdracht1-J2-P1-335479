@@ -10,7 +10,7 @@ class InstructeurController extends Controller
 {
     public function index()
     {
-        $instructeurs = Instructeur::all('Id');
+        $instructeurs = Instructeur::orderBy('AantalSterren', 'desc')->get();
         return view('instructeur.index', ['instructeurs' => $instructeurs]);
     }
 }

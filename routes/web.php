@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstructeurController;
+use App\Http\Controllers\VoertuigController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,10 @@ use App\Http\Controllers\InstructeurController;
 |
 */
 
-Route::get('/', function () {
-    return view('instructeur.index');
-});
+// Route::get('/', function () {
+//     return view('instructeur.index');
+// });
 
-Route::get('/instructeur', [InstructeurController::class, 'index'])->name('instructeur.index');
+Route::get('/', [InstructeurController::class, 'index'])->name('instructeur.index');
+
+Route::get('/voertuig', [VoertuigController::class, 'index'])->name('voertuig.index');

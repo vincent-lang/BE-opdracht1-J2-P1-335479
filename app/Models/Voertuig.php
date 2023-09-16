@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Voertuig extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'Id',
+        'Kenteken',
+        'Type',
+        'Bouwjaar',
+        'Brandstof',
+        'TypeVoertuigId',
+        'IsActief',
+        'OpMerkingen',
+        'DatumAanGemaakt',
+        'DatumGewijzigd'
+    ];
+}
