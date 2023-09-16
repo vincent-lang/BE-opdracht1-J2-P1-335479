@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
     <title>Document</title>
 </head>
 
@@ -31,7 +31,7 @@
                 <td>{{$instructeur->DatumInDienst}}</td>
                 <td>{{$instructeur->AantalSterren}}</td>
                 <td>
-                    <a href="{{route('voertuig.index', ['instructeur' => $instructeur])}}">
+                    <a href="{{route('instructeur.list', [$instructeur->Id])}}">
                         <img src="img/car.png" alt="car.png">
                     </a>
                 </td>

@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstructeurController;
-use App\Http\Controllers\VoertuigController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +20,4 @@ use App\Http\Controllers\VoertuigController;
 
 Route::get('/', [InstructeurController::class, 'index'])->name('instructeur.index');
 
-Route::get('/voertuig', [VoertuigController::class, 'index'])->name('voertuig.index');
+Route::get('/instructeur/{instructeur}/list', [InstructeurController::class, 'list'])->name('instructeur.list');
