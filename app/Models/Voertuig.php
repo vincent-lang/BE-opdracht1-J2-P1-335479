@@ -15,10 +15,6 @@ class Voertuig extends Model
         'Type',
         'Bouwjaar',
         'Brandstof',
-        'TypeVoertuigId',
-        'IsActief',
-        'OpMerkingen',
-        'DatumAanGemaakt',
-        'DatumGewijzigd'
+        'TypeVoertuigId'
     ];
 }
