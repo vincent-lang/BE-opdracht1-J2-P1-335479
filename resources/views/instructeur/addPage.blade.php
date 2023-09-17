@@ -25,16 +25,16 @@
             <th>Wijzigen</th>
         </thead>
         <tbody>
-            @foreach ($data as $row)
+            @foreach ($voertuigData as $voertuigRow)
             <tr>
-                <td>{{$row->TypeVoertuig}}</td>
-                <td>{{$row->Type}}</td>
-                <td>{{$row->Kenteken}}</td>
-                <td>{{$row->Bouwjaar}}</td>
-                <td>{{$row->Brandstof}}</td>
-                <td>{{$row->Rijbewijscategorie}}</td>
+                <td>{{$voertuigRow->TypeVoertuig}}</td>
+                <td>{{$voertuigRow->Type}}</td>
+                <td>{{$voertuigRow->Kenteken}}</td>
+                <td>{{$voertuigRow->Bouwjaar}}</td>
+                <td>{{$voertuigRow->Brandstof}}</td>
+                <td>{{$voertuigRow->Rijbewijscategorie}}</td>
                 <td>
-                    <a href="">
+                    <a href="{{route('instructeur.add', [$instructeurs->Id, $voertuigRow->Id])}}">
                         <img src="/img/add.png" alt="add.png">
                     </a>
                 </td>

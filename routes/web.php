@@ -23,3 +23,5 @@ Route::get('/', [InstructeurController::class, 'index'])->name('instructeur.inde
 Route::get('/instructeur/{instructeur}/list', [InstructeurController::class, 'list'])->name('instructeur.list');
 
 Route::get('/instructeur/{instructeur}/addPage', [InstructeurController::class, 'addPage'])->name('instructeur.addPage');
+
+Route::get('/instructeur/{instructeur}/{row}/add', [InstructeurController::class, 'add'])->name('instructeur.add');

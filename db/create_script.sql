@@ -97,8 +97,8 @@ foreign key (TypeVoertuigId) references Type_voertuigs(Id)
 -- =============================================================================
 --  01            29-08-2023      Vincent van de Merwe            new          
 -- =============================================================================
-drop table if exists VoertuigInstructeurs;
-create table if not exists VoertuigInstructeurs (
+drop table if exists Voertuig_Instructeurs;
+create table if not exists Voertuig_Instructeurs (
 Id TINYINT UNSIGNED not null auto_increment,
 VoertuigId TINYINT UNSIGNED not null,
 InstructeurId TINYINT UNSIGNED not null,
@@ -185,15 +185,15 @@ VALUES (null, '45-SD-23', 'Renault', '01-01-2023', 'Diesel', 3, 1, NULL, SYSDATE
 -- =============================================================================
 --  01            29-08-2023      Vincent van de Merwe            new          
 -- =============================================================================
-INSERT INTO VoertuigInstructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
+INSERT INTO Voertuig_Instructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
 VALUES (null, 1, 5, '2017-06-18', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO VoertuigInstructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
+INSERT INTO Voertuig_Instructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
 VALUES (null, 3, 1, '2021-09-26', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO VoertuigInstructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
+INSERT INTO Voertuig_Instructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
 VALUES (null, 9, 1, '2021-09-27', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO VoertuigInstructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
+INSERT INTO Voertuig_Instructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
 VALUES (null, 3, 4, '2022-08-01', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO VoertuigInstructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
+INSERT INTO Voertuig_Instructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
 VALUES (null, 5, 1, '2019-08-30', 1, NULL, SYSDATE(6), SYSDATE(6));
-INSERT INTO VoertuigInstructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
+INSERT INTO Voertuig_Instructeurs (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
 VALUES (null, 10, 5, '2020-02-02', 1, NULL, SYSDATE(6), SYSDATE(6));
