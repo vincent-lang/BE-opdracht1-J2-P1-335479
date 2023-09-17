@@ -21,3 +21,5 @@ use App\Http\Controllers\InstructeurController;
 Route::get('/', [InstructeurController::class, 'index'])->name('instructeur.index');
 
 Route::get('/instructeur/{instructeur}/list', [InstructeurController::class, 'list'])->name('instructeur.list');
+
+Route::get('/instructeur/{instructeur}/addPage', [InstructeurController::class, 'addPage'])->name('instructeur.addPage');

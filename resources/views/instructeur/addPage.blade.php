@@ -9,13 +9,10 @@
 </head>
 
 <body>
-    <h3>Door instructeur gebruikte voertuigen</h3>
+    <h3>Alle beschikbare voertuigen</h3>
     <h3>Naam: {{$instructeurs->Voornaam}} {{$instructeurs->Tussenvoegsel}} {{$instructeurs->Achternaam}}</h3>
     <h3>Datum in dienst: {{$instructeurs->DatumInDienst}}</h3>
     <h3>Aantal sterren: {{$instructeurs->AantalSterren}}</h3>
-    <h3>
-        <a href="{{route('instructeur.addPage', [$instructeurs->Id])}}">Toevoegen voertuig</a>
-    </h3>
     <table>
         <thead>
             <th>Type voertuig</th>
@@ -24,6 +21,7 @@
             <th>Bouwjaar</th>
             <th>Brandstof</th>
             <th>Rijbewijs categorie</th>
+            <th>Toevoegen</th>
             <th>Wijzigen</th>
         </thead>
         <tbody>
@@ -35,6 +33,11 @@
                 <td>{{$row->Bouwjaar}}</td>
                 <td>{{$row->Brandstof}}</td>
                 <td>{{$row->Rijbewijscategorie}}</td>
+                <td>
+                    <a href="">
+                        <img src="/img/add.png" alt="add.png">
+                    </a>
+                </td>
                 <td>
                     <a href="">
                         <img src="/img/wijzig.png" alt="wijzig.png">
