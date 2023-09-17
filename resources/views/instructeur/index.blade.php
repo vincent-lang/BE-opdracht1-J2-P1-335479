@@ -32,7 +32,7 @@
                 <td>{{$instructeur->AantalSterren}}</td>
                 <td>
                     <a href="{{route('instructeur.list', [$instructeur->Id])}}">
-                        <img src="img/car.png" alt="car.png">
+                        <img src="/img/car.png" alt="car.png">
                     </a>
                 </td>
             </tr>

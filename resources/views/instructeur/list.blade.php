@@ -13,6 +13,9 @@
     <h3>Naam: {{$instructeurs->Voornaam}} {{$instructeurs->Tussenvoegsel}} {{$instructeurs->Achternaam}}</h3>
     <h3>Datum in dienst: {{$instructeurs->DatumInDienst}}</h3>
     <h3>Aantal sterren: {{$instructeurs->AantalSterren}}</h3>
+    <h3>
+        <a href="">Toevoegen voertuig</a>
+    </h3>
     <table>
         <thead>
             <th>Type voertuig</th>
@@ -32,6 +35,11 @@
                 <td>{{$row->Bouwjaar}}</td>
                 <td>{{$row->Brandstof}}</td>
                 <td>{{$row->Rijbewijscategorie}}</td>
+                <td>
+                    <a href="">
+                        <img src="/img/wijzig.png" alt="wijzig.png">
+                    </a>
+                </td>
             </tr>
             @endforeach
         </tbody>
