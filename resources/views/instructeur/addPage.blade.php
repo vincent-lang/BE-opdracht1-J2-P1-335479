@@ -47,6 +47,9 @@
             @endforeach
         </tbody>
     </table>
+    <h3>
+        <a href="{{route('instructeur.list', [$instructeurs->Id])}}">go back</a>
+    </h3>
 </body>
 
 </html>

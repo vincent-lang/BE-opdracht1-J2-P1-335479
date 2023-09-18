@@ -44,6 +44,9 @@
             @endforeach
         </tbody>
     </table>
+    <h3>
+        <a href="{{route('instructeur.index')}}">go back</a>
+    </h3>
 </body>
 
 </html>
