@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller;
 use App\Models\Instructeur;
 use App\Models\Voertuig;
 use App\Models\VoertuigInstructeur;
+use Illuminate\Support\Facades\DB;
 
 class InstructeurController extends Controller
 {
@@ -28,13 +29,14 @@ class InstructeurController extends Controller
         return view('instructeur.list', ['instructeurs' => $instructeur], compact('data'));
     }
 
-    public function addPage(Instructeur $instructeur, Voertuig $voertuig)
+    public function addPage(Instructeur $instructeur)
     {
         $id = $instructeur->Id;
-        dd($instructeur);
-        $voertuigData = Voertuig::leftJoin('Voertuig_Instructeurs', 'Voertuigs.Id', '=', 'Voertuig_Instructeurs.VoertuigId')
+        $voertuigData = DB::table('Voertuigs')
+            ->select('Voertuig_instructeurs.*', 'Voertuigs.Id', 'Voertuigs.Type', 'Voertuigs.Kenteken', 'Voertuigs.Bouwjaar', 'Voertuigs.Brandstof', 'Type_voertuigs.Rijbewijscategorie', 'Type_voertuigs.TypeVoertuig')
+            ->leftJoin('Voertuig_Instructeurs', 'Voertuigs.Id', '=', 'voertuig_instructeurs.VoertuigId')
             ->join('Type_voertuigs', 'Voertuigs.TypeVoertuigId', '=', 'Type_voertuigs.Id')
-            ->whereNull('Voertuig_Instructeurs.voertuigId')
+            ->whereNull('voertuig_instructeurs.VoertuigId')
             ->get();
         return view('instructeur.addPage', ['instructeurs' => $instructeur], compact('voertuigData'));
     }
@@ -53,6 +55,6 @@ class InstructeurController extends Controller
             'DatumAangemaakt' => $DatumAangemaakt,
             'DatumGewijzigd' => $DatumGewijzigd
         ));
-        return view('instructeur.add', compact('data'));
+        return redirect(route('instructeur.list', [$instructeurId]));
     }
 }
