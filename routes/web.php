@@ -25,3 +25,7 @@ Route::get('/instructeur/{instructeur}/list', [InstructeurController::class, 'li
 Route::get('/instructeur/{instructeur}/addPage', [InstructeurController::class, 'addPage'])->name('instructeur.addPage');
 
 Route::get('/instructeur/{instructeur}/{row}/add', [InstructeurController::class, 'add'])->name('instructeur.add');
+
+Route::get('/instructeur/{instructeur}/{row}/editPage', [InstructeurController::class, 'edit'])->name('instructeur.editPage');
+
+Route::put('/instructeur/{instructeur}/{row}/update', [InstructeurController::class, 'update'])->name('instructeur.update');

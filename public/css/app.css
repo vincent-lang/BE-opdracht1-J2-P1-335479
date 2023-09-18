@@ -83,7 +83,11 @@ form.wijzig>input[type=checkbox] {
     width: 1rem;
 }
 
-form.wijzig>label.wijzig-form-label {
+form.wijzig>div.wijzig {
     margin-top: 0.9rem;
     margin-bottom: 0.9rem;
+}
+
+img.small-img {
+    width: 20%;
 }
